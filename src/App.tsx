@@ -4,13 +4,13 @@ import ComponentItem from "./page/app/components/componentPanel/ComponenItem";
 import RenderComponentCanvas from "./page/app/components/dotPanel/renderComponentCanvas";
 import { buildComponentList } from "./widgetLibrary/componentListBuildet";
 import { WidgetConfig } from "./widgetLibrary/interface";
-import { widgetBuilder } from "./widgetLibrary/widgetBuilder";
+// import { widgetBuilder } from "./widgetLibrary/widgetBuilder";
 import useMeasure from "react-use-measure";
 function App() {
   const propsId: WidgetConfig[] = buildComponentList();
-  const parentNode: any = propsId.map((e: WidgetConfig) => {
-    return widgetBuilder(e.type);
-  });
+  // const parentNode: any = propsId.map((e: WidgetConfig) => {
+  //   return widgetBuilder(e.type);
+  // });
   const [containerBoundRef, containerBound] = useMeasure();
   const containerRef = useRef<HTMLDivElement>(
     null
@@ -66,7 +66,7 @@ function App() {
               minHeight={containerBound.height - 16}
               safeRowNumber={0}
               addedRowNumber={40}
-              parentNode={parentNode}
+              // parentNode={parentNode}
             />
           </div>
         </div>

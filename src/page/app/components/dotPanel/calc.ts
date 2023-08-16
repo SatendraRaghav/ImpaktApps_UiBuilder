@@ -8,20 +8,14 @@ interface ItemPosition {
   x: number
   y: number
 }
-
 interface CanvasPosition {
   x: number
   y: number
 }
-
 interface NodeWidthAndHeight {
   w: number
   h: number
 }
-
-
-
-
 interface CenterPointPosition {
   x: number
   y: number
